@@ -22,6 +22,14 @@ module ArtemisApi
       ArtemisApi::Batch.find_all(id, client)
     end
 
+    def stages
+      ArtemisApi::Stage.find_all(id, client)
+    end
+
+    def find_stage(stage_id)
+      ArtemisApi::Stage.find(stage_id, id, client)
+    end
+
     def find_batch(batch_id)
       ArtemisApi::Batch.find(batch_id, id, client)
     end
